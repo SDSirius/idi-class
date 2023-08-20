@@ -1,4 +1,4 @@
-import {IsEmail, MinLength, MaxLength, Matches, IsString, isBoolean} from 'class-validator'
+import {IsEmail, MinLength, MaxLength, Matches, IsBoolean} from 'class-validator'
 import { UserMessagesHelper } from '../helpers/messages.helper';
 
 export class RegisterDto {
@@ -14,6 +14,7 @@ export class RegisterDto {
         {message: UserMessagesHelper.REGISTER_PASSWORD_NOT_VALID})
     password:string;
 
+    @IsBoolean()
     professor:boolean;
 
 }
